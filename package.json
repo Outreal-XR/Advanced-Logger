@@ -1,0 +1,14 @@
+{
+  "name": "com.outrealxr.logger",
+  "version": "0.0.1",
+  "displayName": "Logger",
+  "description": "This is an example package",
+  "unity": "2021.3",
+  "unityRelease": "1f1",
+  "author": {
+    "name": "Sarkis Khorozian",
+    "email": "khorozian2@gmail.com",
+    "url": "https://github.com/SKhorozian"
+  },
+  "type": "tool"
+}
