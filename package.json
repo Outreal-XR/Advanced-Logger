@@ -2,7 +2,7 @@
   "name": "com.outrealxr.logger",
   "version": "0.0.1",
   "displayName": "Logger",
-  "description": "This is an example package",
+  "description": "Easily control the messages you want to log between Unity editor and WebGL console. Also, provides the ability to show the logs manually.",
   "unity": "2021.3",
   "unityRelease": "1f1",
   "author": {
