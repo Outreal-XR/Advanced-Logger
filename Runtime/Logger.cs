@@ -41,10 +41,10 @@ namespace Logging.Runtime
             
             if (Application.platform is RuntimePlatform.WebGLPlayer && !editorOnly)
                 logFunction(messagePlain);
+            else if (Application.platform is RuntimePlatform.WebGLPlayer && editorOnly)
+                callEvent(new LogEvent(messagePlain, messageRich, requester));
             else if (Application.platform is RuntimePlatform.WindowsEditor or RuntimePlatform.OSXEditor or RuntimePlatform.LinuxEditor) 
                 logFunction(messageRich);
-            
-            callEvent(new LogEvent(messagePlain, messageRich, requester));
         }
         
         private const string LogFormatRichText = "<b><color={0}>[{1}]</color></b> {2}";
