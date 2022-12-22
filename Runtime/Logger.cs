@@ -36,7 +36,7 @@ namespace Logging.Runtime
             Print(Debug.LogError, evt => OnErrorLogged?.Invoke(evt), message, ErrorColor, requester, false);
 
         private static void Print(Action<string> logFunction, Action<LogEvent> callEvent, string message, string color, object requester, bool editorOnly) {
-            var messagePlain = FormatTextPLain(message, requester);
+            var messagePlain = FormatTextPlain(message, requester);
             var messageRich = FormatTextRich(message, color, requester);
             
             if (Application.platform is RuntimePlatform.WebGLPlayer && !editorOnly)
@@ -50,7 +50,7 @@ namespace Logging.Runtime
         private const string LogFormatRichText = "<b><color={0}>[{1}]</color></b> {2}";
         private const string LogFormatPlainText = "[{0}] {1}";
         
-        private static string FormatTextPLain(string message, object requester) => string.Format(LogFormatPlainText, requester.GetType().Name, message);
+        private static string FormatTextPlain(string message, object requester) => string.Format(LogFormatPlainText, requester.GetType().Name, message);
         private static string FormatTextRich(string message, string color, object requester) => string.Format(LogFormatRichText, color, requester.GetType().Name, message);
         
         public static event Action<LogEvent> OnMessageLogged;
